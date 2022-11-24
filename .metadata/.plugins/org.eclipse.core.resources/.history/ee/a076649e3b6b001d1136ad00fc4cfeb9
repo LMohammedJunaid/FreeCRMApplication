@@ -1,0 +1,29 @@
+package stepDefination;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class FreeCRMApplicationMethods {
+	
+	@Given("^user should lauch the Chrome Browser$")
+	public void user_should_lauch_the_Chrome_Browser() {
+	    
+	}
+
+	@When("^user enters the Free CRM Application URL Address$")
+	public void user_enters_the_Free_CRM_Application_URL_Address(){
+	   
+	}
+
+	@Then("^user should navigate to Home Page of Free CRM Application$")
+	public void user_should_navigate_to_Home_Page_of_Free_CRM_Application() {
+	    
+	}
+
+	@Then("^user should close the Free CRM Application$")
+	public void user_should_close_the_Free_CRM_Application() {
+	    
+	}
+
+}

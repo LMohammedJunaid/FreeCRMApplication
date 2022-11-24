@@ -1,0 +1,51 @@
+package stepDefination;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class FreeCRMApplicationMethods {
+	
+	WebDriver driver;
+	String applicationUrlAddres = "https://ui.freecrm.com/";
+	
+	@Given("^user should lauch the Chrome Browser$")
+	public void user_should_lauch_the_Chrome_Browser() {
+		
+		System.setProperty("webriver.chrome.driver", "./DriverFiles/chromedriver.exe");
+		
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.get(applicationUrlAddres);
+		
+	    
+	}
+
+	@When("^user enters the Free CRM Application URL Address$")
+	public void user_enters_the_Free_CRM_Application_URL_Address(){
+		
+		String  actual_CRMApplicationURLAddress =driver.getCurrentUrl();
+		System.out.println(actual_CRMApplicationURLAddress);
+	   
+	}
+
+	@Then("^user should navigate to Home Page of Free CRM Application$")
+	public void user_should_navigate_to_Home_Page_of_Free_CRM_Application() {
+	    
+	}
+
+	@Then("^user should close the Free CRM Application$")
+	public void user_should_close_the_Free_CRM_Application() {
+	    
+	}
+
+}
